@@ -1,29 +1,25 @@
 <template>
   <div id="app">
     <el-container>
-<!--      left-->
-      <el-aside width="200px">
+      <el-aside width="330px">
         <Left></Left>
       </el-aside>
       <el-container>
-<!--        top-->
         <el-header>
           <Top></Top>
         </el-header>
-<!--        main-->
         <el-main><router-view/></el-main>
-<!--        footer-->
         <el-footer>Footer</el-footer>
       </el-container>
     </el-container>
   </div>
 </template>
 <script>
-import Left from './components/left'
-import Top from './components/top'
+import Left from './components/common/left'
+import Top from './components/common/top'
 export default {
   name: 'App',
-  components: {Top, Left},
+  components: {Top, Left}
 }
 </script>
 
@@ -49,6 +45,9 @@ li {
 a {
   color: #42b983;
 }
+.el-header {
+  padding: 0 0px;
+}
 .el-header, .el-footer {
   background-color: #B3C0D1;
   color: #333;
@@ -57,7 +56,7 @@ a {
 }
 
 .el-aside {
-  background-color: #D3DCE6;
+  background-color: #545c64;
   color: #333;
   text-align: center;
   line-height: 200px;
@@ -67,7 +66,7 @@ a {
   background-color: #E9EEF3;
   color: #333;
   text-align: center;
-  line-height: 160px;
+  line-height: 10px;
 }
 
 body > .el-container {

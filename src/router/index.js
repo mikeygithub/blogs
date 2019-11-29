@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-// import Main from '@/components/main'
+import Main from '@/components/common/main'
 
 // module.exports = file => require('@/components/' + file + '.vue').default
 
@@ -11,7 +10,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: HelloWorld
+      component: Main
     }
   ]
 })

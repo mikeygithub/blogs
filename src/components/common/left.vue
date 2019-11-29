@@ -1,10 +1,11 @@
 <template>
+  <el-container>
   <div id="mCSB_1" class="mCustomScrollBox mCS-minimal mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
     <ul class="list-unstyled">
       <li><a class="logo" href="index.html"><img alt="" class="logo img-responsive mCS_img_loaded" src="assets/images/logo-light.png"></a></li>
       <li class="pushy-submenu">
         <a class="submenu-link" href="#">Home <i class="fa fa-angle-down"></i></a>
-        <ul>
+        <ul style="display: none;">
           <li><a href="index.html">Home</a></li>
           <li><a href="index-portfolio.html">Home Portfolio</a></li>
           <li><a href="index-fashion.html">Home Fashion</a></li>
@@ -68,15 +69,16 @@
         </ul>
       </li>
     </ul>
-  </div></div>
+  </div>
+  </div>
+</el-container>
 </template>
 
 <script>
-  export default {
-    name: 'left'
-  }
+export default {
+  name: 'left'
+}
 </script>
-
 <style scoped>
 
 </style>
