@@ -1,82 +1,71 @@
 <template>
-  <el-container>
-  <div id="mCSB_1" class="mCustomScrollBox mCS-minimal mCSB_vertical mCSB_outside" style="max-height: none;" tabindex="0"><div id="mCSB_1_container" class="mCSB_container mCS_y_hidden mCS_no_scrollbar_y" style="position:relative; top:0; left:0;" dir="ltr">
-    <ul class="list-unstyled">
-      <li><a class="logo" href="index.html"><img alt="" class="logo img-responsive mCS_img_loaded" src="assets/images/logo-light.png"></a></li>
-      <li class="pushy-submenu">
-        <a class="submenu-link" href="#">Home <i class="fa fa-angle-down"></i></a>
-        <ul style="display: none;">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index-portfolio.html">Home Portfolio</a></li>
-          <li><a href="index-fashion.html">Home Fashion</a></li>
-          <li><a href="index-business.html">Home Business</a></li>
-          <li><a href="index-single-page.html">Home Single Page</a></li>
-        </ul>
-      </li>
-      <li class="pushy-submenu">
-        <a class="submenu-link" href="#">Blog <i class="fa fa-angle-down"></i></a>
-        <ul>
-          <li><a href="news-reel.html">Blog Reel</a></li>
-          <li><a href="news-grid.html">Blog Grid</a></li>
-          <li><a href="news-list.html">Blog List</a></li>
-          <li><a href="news-carousel.html">Blog Carousel</a></li>
-          <li><a href="single-post.html">Single Post</a></li>
-          <li><a href="single-post-gallery.html">Single Post Gallery</a></li>
-          <li><a href="single-post-video.html">Single Post Video</a></li>
-          <li><a href="single-post-no-sidebar.html">Single Post No Sidebar</a></li>
-        </ul>
-      </li>
-      <li class="pushy-submenu">
-        <a class="submenu-link" href="#">Portfolio <i class="fa fa-angle-down"></i></a>
-        <ul>
-          <li><a href="portfolio-masonry.html">Portfolio Masonry</a></li>
-          <li><a href="portfolio-masonry-alt.html">Portfolio Masonry Alternative</a></li>
-          <li><a href="portfolio-masonry-fullwidth.html">Portfolio Masonry Fullwidth</a></li>
-          <li><a href="portfolio-carousel.html">Portfolio Carousel</a></li>
-          <li><a href="single-portfolio.html">Single Portfolio</a></li>
-          <li><a href="single-portfolio-video.html">Single Portfolio Video</a></li>
-        </ul>
-      </li>
-      <li class="pushy-submenu">
-        <a class="submenu-link" href="#">Pages <i class="fa fa-angle-down"></i></a>
-        <ul>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="contact-us.html">Contact Us</a></li>
-          <li><a href="404.html">404</a></li>
-          <li><a href="coming-soon.html">Coming Soon</a></li>
-        </ul>
-      </li>
-      <li class="pushy-submenu">
-        <a class="submenu-link" href="#">Features <i class="fa fa-angle-down"></i></a>
-        <ul>
-          <li class="pushy-submenu">
-            <a class="submenu-link" href="#">Blog Feeds <i class="fa fa-angle-down"></i></a>
-            <ul>
-              <li><a href="news-grid.html">Blog Style 1</a></li>
-              <li><a href="news-carousel.html">Blog Style 2</a></li>
-              <li><a href="news-list.html">Blog Style 3</a></li>
-              <li><a href="news-reel.html">Blog Style 4</a></li>
-            </ul>
-          </li>
-          <li class="pushy-submenu">
-            <a class="submenu-link" href="#">Team Feeds <i class="fa fa-angle-down"></i></a>
-            <ul>
-              <li><a href="index.html#our-staff">Team Style 1</a></li>
-              <li><a href="index-fashion.html#our-team">Team Style 2</a></li>
-              <li><a href="index-business.html#our-team">Team Style 3</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  </div>
-</el-container>
+  <el-row class="tac">
+    <el-col :span="24">
+      <el-menu
+        mode="vertical"
+        default-active="2"
+        class="el-menu-vertical-demo"
+        @open="handleOpen"
+        @close="handleClose"
+        background-color="#545c64"
+        text-color="#fff"
+        collapse="true"
+        active-text-color="#ffd04b">
+<!--        <el-submenu index="1">-->
+<!--          <template slot="title">-->
+<!--            <i class="el-icon-location"></i>-->
+<!--            <span>导航一</span>-->
+<!--          </template>-->
+<!--          <el-menu-item-group>-->
+<!--            <template slot="title">分组一</template>-->
+<!--            <el-menu-item index="1-1">选项1</el-menu-item>-->
+<!--            <el-menu-item index="1-2">选项2</el-menu-item>-->
+<!--          </el-menu-item-group>-->
+<!--          <el-menu-item-group title="分组2">-->
+<!--            <el-menu-item index="1-3">选项3</el-menu-item>-->
+<!--          </el-menu-item-group>-->
+<!--          <el-submenu index="1-4">-->
+<!--            <template slot="title">选项4</template>-->
+<!--            <el-menu-item index="1-4-1">选项1</el-menu-item>-->
+<!--          </el-submenu>-->
+<!--        </el-submenu>-->
+        <el-menu-item index="1">
+          <i class="el-icon-location"></i>
+          <span slot="title" @onclick="collapseVisible = true">导航一</span>
+        </el-menu-item>
+        <el-menu-item index="2">
+          <i class="el-icon-menu"></i>
+          <span slot="title">导航二</span>
+        </el-menu-item>
+        <el-menu-item index="3" >
+          <i class="el-icon-document"></i>
+          <span slot="title">导航三</span>
+        </el-menu-item>
+        <el-menu-item index="4">
+          <i class="el-icon-setting"></i>
+          <span slot="title">导航四</span>
+        </el-menu-item>
+      </el-menu>
+    </el-col>
+  </el-row>
 </template>
 
 <script>
 export default {
-  name: 'left'
+  name: 'left',
+  data: function () {
+    return {
+      collapseVisible: false
+    }
+  },
+  methods: {
+    handleOpen (key, keyPath) {
+      console.log(key, keyPath)
+    },
+    handleClose (key, keyPath) {
+      console.log(key, keyPath)
+    }
+  }
 }
 </script>
 <style scoped>

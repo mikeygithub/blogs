@@ -23,7 +23,7 @@
         <el-menu-item index="2-3">选项3</el-menu-item>
       </el-submenu>
       <el-menu-item index="3"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
-      <el-button @click="drawer = true" type="primary" style="margin-left: 16px;">关于作者</el-button>
+      <el-menu-item index="4"><a href="#" @click="drawer = true">关于作者</a></el-menu-item>
     </el-menu>
   </div>
   </div>

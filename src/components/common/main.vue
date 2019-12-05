@@ -17,12 +17,12 @@
       </el-row>
     </el-container>
   <el-container>
-    <el-row :gutter="5">
+    <el-row :gutter="5" style="margin-top: 20px">
       <el-col :span="4" v-for="(o, index) in 5" :key="o" :offset="index > 0 ? 1 : 0">
         <el-card :body-style="{ padding: '0px' }">
           <img :src=IMG class="image">
           <div style="padding: 5px;">
-            <span>好吃的汉堡</span>
+            <span>Docker技术应用</span>
             <div class="bottom clearfix">
               <time class="time">{{ currentDate }}</time>
               <el-button type="text" class="button">详情信息</el-button>
@@ -47,7 +47,7 @@
   </div>
 </template>
 <script>
-import IMG from '@/assets/images/hamburger.png'
+import IMG from '@/assets/images/docker.jpg'
 import BLOCKCHAIN from '@/assets/images/blockchain.jpg'
 export default {
   name: 'main',
