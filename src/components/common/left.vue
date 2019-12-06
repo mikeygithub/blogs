@@ -24,8 +24,12 @@
       </div>
     </div>
     <div>
-      <el-input placeholder="请输入内容" v-model="input1" style="background: rgb(84, 92, 100)">
-        <template slot="prepend">园内搜索</template>
+      <el-input placeholder="请输入内容" v-model="key" class="input-with-select">
+        <el-select v-model="select" slot="prepend" placeholder="">
+          <el-option label="站内搜索" value="1"></el-option>
+          <el-option label="站外搜索" value="2"></el-option>
+        </el-select>
+        <el-button slot="append" icon="el-icon-search"></el-button>
       </el-input>
     </div>
     <el-container>
@@ -42,26 +46,40 @@
           :collapse="collapseVisible"
           active-text-color="#ffd04b">
           <el-menu-item index="1">
-            <i class="el-icon-location"></i>
-            <span slot="title" @onclick="collapseVisible = false">导航一</span>
+            <i class="el-icon-s-data"></i>
+            <span slot="title" @onclick="collapseVisible = false">阅读排行</span>
           </el-menu-item>
           <el-menu-item index="2">
             <i class="el-icon-menu"></i>
-            <span slot="title">导航二</span>
+            <span slot="title">全部博文</span>
           </el-menu-item>
           <el-menu-item index="3" >
-            <i class="el-icon-document"></i>
-            <span slot="title">导航三</span>
+            <i class="el-icon-message"></i>
+            <span slot="title">电子邮件</span>
           </el-menu-item>
           <el-menu-item index="4">
             <i class="el-icon-setting"></i>
-            <span slot="title">导航四</span>
+            <span slot="title">关注订阅</span>
           </el-menu-item>
         </el-menu>
       </el-col>
     </el-row>
     </el-container>
+    <el-divider>分类标签</el-divider>
+    <div class="tag">
+      <el-tag style="margin: 5px;"
+        v-for="tag in tags"
+        :key="tag.name"
+        :type="tag.type">
+        {{tag.name}}
+      </el-tag>
+    </div>
     <!--日历-->
+<!--    <el-container>-->
+<!--      <el-calendar v-model="dateTime">-->
+<!--      </el-calendar>-->
+<!--    </el-container>-->
+    <el-divider>日期</el-divider>
     <div class="time">
       <table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
         <tbody>
@@ -232,6 +250,17 @@
         </tbody>
       </table>
     </div>
+    <el-divider>最新文章</el-divider>
+    <div class="article">
+        <el-table
+          :data="tableData"
+          style="width: 100%">
+          <el-table-column
+            prop="address"
+            label="地址">
+          </el-table-column>
+        </el-table>
+    </div>
   </div>
 </template>
 
@@ -242,10 +271,41 @@ export default {
   name: 'left',
   data: function () {
     return {
+      key: '',
       src: BG,
       head: HEAD,
+      select: '',
       dateTime: new Date(),
-      collapseVisible: false
+      collapseVisible: false,
+      tags: [
+        { name: 'Golang1', type: '' },
+        { name: 'Node1', type: 'success' },
+        { name: 'K8s1', type: 'info' },
+        { name: 'docker1', type: 'warning' },
+        // eslint-disable-next-line standard/object-curly-even-spacing
+        { name: 'Golang2', type: '' },
+        { name: 'Node2', type: 'success' },
+        { name: 'K8s2', type: 'info' },
+        { name: 'docker2', type: 'warning' },
+        { name: 'Golang3', type: '' },
+        { name: 'Node3', type: 'success' },
+        { name: 'K8s3', type: 'info' },
+        { name: 'docker3', type: 'warning' },
+        // eslint-disable-next-line standard/object-curly-even-spacing
+        { name: 'Golang4', type: '' },
+        { name: 'Node4', type: 'success' },
+        { name: 'K8s4', type: 'info' },
+        { name: 'docker4', type: 'warning' }
+      ],
+      tableData: [{
+        address: '上海市普陀区金沙江路 1518 弄'
+      }, {
+        address: '上海市普陀区金沙江路 1517 弄'
+      }, {
+        address: '上海市普陀区金沙江路 1519 弄'
+      }, {
+        address: '上海市普陀区金沙江路 1516 弄'
+      }]
     }
   },
   methods: {
@@ -300,7 +360,7 @@ export default {
     padding: 20px;
   }
   .time {
-    margin: 5px;
+    margin: 10px;
   }
   .time .Cal{
     width: 100%;
@@ -317,5 +377,39 @@ export default {
     border-left-width: 0px;
     border-color: grey;
     display: table;
+  }
+  .el-divider__text {
+    position: absolute;
+    background-color: #545c64;
+    padding: 0 20px;
+    color: #303133;
+  }
+  .time a{
+    color: #333333;
+  }
+ >>> .el-input-group__append,>>> .el-input-group__prepend {
+     background-color: transparent;
+  }
+ >>> .el-input__inner {
+    -webkit-appearance: none;
+    background-color: transparent;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #DCDFE6;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #DCDFE6;
+    display: inline-block;
+    font-size: inherit;
+    height: 40px;
+    line-height: 40px;
+    outline: 0;
+    padding: 0 15px;
+    -webkit-transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    width: 100%;
+  }
+  >>>.el-table{
+    background: transparent;
   }
 </style>

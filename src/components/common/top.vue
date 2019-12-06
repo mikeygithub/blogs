@@ -23,19 +23,19 @@
         <i class="el-icon-s-fold"></i>隐藏侧边
       </el-menu-item>
       <el-submenu index="2">
-        <template slot="title">我的工作台</template>
+        <template slot="title"><i class="el-icon-s-platform"></i>我的工作台</template>
         <el-menu-item index="2-1">选项1</el-menu-item>
         <el-menu-item index="2-2">选项2</el-menu-item>
         <el-menu-item index="2-3">选项3</el-menu-item>
       </el-submenu>
       <el-submenu index="5">
-        <template slot="title">我的工作台</template>
+        <template slot="title"><i class="el-icon-s-tools"></i>设置</template>
         <el-menu-item index="2-1">选项1</el-menu-item>
         <el-menu-item index="2-2">选项2</el-menu-item>
         <el-menu-item index="2-3">选项3</el-menu-item>
       </el-submenu>
-      <el-menu-item index="4"><a href="#" @click="drawer = true">关于作者</a></el-menu-item>
-      <el-menu-item index="3"><a href="#" target="_blank">首页</a></el-menu-item>
+      <el-menu-item index="4"><a href="#" @click="drawer = true"><i class="el-icon-user-solid"></i>关于作者</a></el-menu-item>
+      <el-menu-item index="3"><a href="#" ><i class="el-icon-s-home"></i>首页</a></el-menu-item>
     </el-menu>
   </div>
   </div>
