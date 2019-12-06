@@ -10,8 +10,8 @@
     <el-container>
       <el-row style="width: 100%">
         <el-col :span="24">
-          <div class="grid-content bg-purple-dark">
-            <span style="line-height: 60px;font-size: 20px">专题分类</span>
+          <div class="grid-content bg-purple-dark" style="text-align: left">
+            <span style="line-height: 60px;font-size: 20px;margin-left: 10px">专题分类>></span>
           </div>
         </el-col>
       </el-row>
@@ -48,9 +48,9 @@
 </template>
 <script>
 import IMG from '@/assets/images/docker.jpg'
-import BLOCKCHAIN from '@/assets/images/blockchain.jpg'
+import BLOCKCHAIN from '@/assets/images/flutter.jpeg'
 export default {
-  name: 'main',
+  name: 'Main',
   data () {
     return {
       activeIndex: '1',

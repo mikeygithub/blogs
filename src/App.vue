@@ -1,7 +1,8 @@
 <template>
+  <transition name="fade">
   <div id="app">
     <el-container>
-      <el-aside width="330px">
+      <el-aside v-show="this.asideVisible">
         <Left></Left>
       </el-aside>
       <el-container>
@@ -9,17 +10,23 @@
           <Top></Top>
         </el-header>
         <el-main><router-view/></el-main>
-        <el-footer>Footer</el-footer>
+        <el-footer><Footer></Footer></el-footer>
       </el-container>
     </el-container>
   </div>
+  </transition>
 </template>
 <script>
 import Left from './components/common/left'
 import Top from './components/common/top'
+import Footer from './components/common/footer'
 export default {
   name: 'App',
-  components: {Top, Left}
+  components: {Top, Left, Footer},
+  data: function () {
+    return {
+    }
+  }
 }
 </script>
 
@@ -43,10 +50,11 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #ffffff;
 }
 .el-header {
   padding: 0 0px;
+  margin-right: 0px;
 }
 .el-header, .el-footer {
   background-color: #B3C0D1;
@@ -59,9 +67,11 @@ a {
   background-color: #545c64;
   color: #333;
   text-align: center;
-  line-height: 200px;
+  /*line-height: 200px;*/
 }
-
+.hideSidebar {
+  width: 50px !important;
+}
 .el-main {
   background-color: #E9EEF3;
   color: #333;
