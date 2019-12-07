@@ -37,7 +37,7 @@
       <el-col :span="24">
         <el-menu
           mode="vertical"
-          default-active="2"
+          default-active="1"
           class="el-menu el-menu-vertical-demo"
           @open="handleOpen"
           @close="handleClose"
@@ -250,16 +250,35 @@
         </tbody>
       </table>
     </div>
-    <el-divider>最新文章</el-divider>
+    <el-divider>热门文章</el-divider>
     <div class="article">
         <el-table
+          size="small"
+          align="right"
+          :show-header="false"
           :data="tableData"
           style="width: 100%">
-          <el-table-column
-            prop="address"
-            label="地址">
+          <el-table-column>
+            <template slot-scope="scope">
+              <el-link type="warning"><i class="el-icon-document"></i><span v-text="scope.row.address"></span></el-link>
+            </template>
           </el-table-column>
         </el-table>
+    </div>
+    <el-divider>最新文章</el-divider>
+    <div class="article">
+      <el-table
+        size="small"
+        align="right"
+        :show-header="false"
+        :data="tableData"
+        style="width: 100%">
+        <el-table-column>
+          <template slot-scope="scope">
+            <el-link type="success"><i class="el-icon-document"></i><span v-text="scope.row.address"></span></el-link>
+          </template>
+        </el-table-column>
+      </el-table>
     </div>
   </div>
 </template>
@@ -298,13 +317,15 @@ export default {
         { name: 'docker4', type: 'warning' }
       ],
       tableData: [{
-        address: '上海市普陀区金沙江路 1518 弄'
+        address: '同步/异步/阻塞/非阻塞/BIO/NIO/AIO'
       }, {
-        address: '上海市普陀区金沙江路 1517 弄'
+        address: '部署你的第一个ASP.NET Core应用到k8s集群'
       }, {
-        address: '上海市普陀区金沙江路 1519 弄'
+        address: 'Python为例的Async/Await的编程基础'
       }, {
-        address: '上海市普陀区金沙江路 1516 弄'
+        address: '使用HttpReports快速搭建API分析平台'
+      }, {
+        address: '分布式之数据库和缓存双写一致性方案解析'
       }]
     }
   },
@@ -411,5 +432,16 @@ export default {
   }
   >>>.el-table{
     background: transparent;
+  }
+  >>>.el-table td, .el-table th {
+    padding: 10px 0;
+    min-width: 0;
+    /*-webkit-box-sizing: border-box;*/
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    /* position: relative; */
+    text-align: center;
+    background-color: rgb(84, 92, 100);
   }
 </style>

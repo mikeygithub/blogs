@@ -2,7 +2,7 @@
   <transition name="fade">
   <div id="app">
     <el-container>
-      <el-aside v-show="this.asideVisible" width="320px">
+      <el-aside v-show="this.asideVisible" width="320px" v-if="false">
         <Left></Left>
       </el-aside>
       <el-container>
@@ -77,6 +77,7 @@ a {
   color: #333;
   text-align: center;
   line-height: 10px;
+  padding: 0px;
 }
 
 body > .el-container {

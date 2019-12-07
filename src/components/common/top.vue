@@ -5,8 +5,9 @@
       :visible.sync="drawer"
       :show-close="false"
       :with-header="true">
-      <div>
-        <about></about>
+      <div style="background:red;">
+        <!--<about></about>-->
+        <h1>Hello</h1>
       </div>
     </el-drawer>
   </div>
@@ -68,5 +69,8 @@ export default {
 }
 .el-submenu{
   float: right;
+}
+.el-menu.el-menu--horizontal {
+  border-bottom: solid 0px #e6e6e6;
 }
 </style>
