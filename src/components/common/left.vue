@@ -75,10 +75,6 @@
       </el-tag>
     </div>
     <!--日历-->
-<!--    <el-container>-->
-<!--      <el-calendar v-model="dateTime">-->
-<!--      </el-calendar>-->
-<!--    </el-container>-->
     <el-divider>日期</el-divider>
     <div class="time">
       <table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
@@ -319,7 +315,7 @@ export default {
       tableData: [{
         address: '同步/异步/阻塞/非阻塞/BIO/NIO/AIO'
       }, {
-        address: '部署你的第一个ASP.NET Core应用到k8s集群'
+        address: '部署你的ASP.NET Core应用到k8s集群'
       }, {
         address: 'Python为例的Async/Await的编程基础'
       }, {
@@ -357,7 +353,6 @@ export default {
   .title h1{
     margin: 0 0px;
     font-weight: 700;
-
   }
   .info{
     height: 250px;
@@ -367,7 +362,7 @@ export default {
     padding: 15px;
     color: #ffffff;
     font-size: 15px;
-    line-height: 1.8;
+    line-height: 1.5;
     margin-top: 0 !important;
   }
   .introduce-via img {
@@ -378,7 +373,7 @@ export default {
     box-shadow: inset 1px 1px 4px rgba(0,0,0,0.3), 0 2px 3px rgba(0,0,0,0.4);
   }
   .introduce-head{
-    padding: 20px;
+    padding: 15px;
   }
   .time {
     margin: 10px;
@@ -436,12 +431,11 @@ export default {
   >>>.el-table td, .el-table th {
     padding: 10px 0;
     min-width: 0;
-    /*-webkit-box-sizing: border-box;*/
     box-sizing: border-box;
     text-overflow: ellipsis;
     vertical-align: middle;
-    /* position: relative; */
     text-align: center;
     background-color: rgb(84, 92, 100);
+    border-radius: 10px;
   }
 </style>

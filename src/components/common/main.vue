@@ -14,7 +14,7 @@
       <el-row style="width: 100%">
         <el-col :span="24">
           <div class="grid-content bg-purple-dark" style="text-align: left">
-            <span style="line-height: 60px;font-size: 20px;margin-left: 15px;font-weight: lighter;">技术栈分类>></span>
+            <span style="line-height: 60px;font-size: 20px;margin-left: 15px;font-weight: lighter;" @click="detail">技术栈分类>></span>
           </div>
         </el-col>
       </el-row>
@@ -44,7 +44,7 @@
               <span>{{item.name}}</span>
               <div class="bottom clearfix">
                 <time class="time">{{ item.describe }}</time>
-                <el-button type="text" class="button">详情信息</el-button>
+                <el-button type="text" class="button" @click="detail">详情信息</el-button>
               </div>
             </div>
           </el-card>
@@ -67,21 +67,31 @@
       <el-row style="width: 100%">
         <el-col :span="24">
           <div class="grid-content bg-purple-dark" style="text-align: left">
-            <span style="line-height: 60px;font-size: 20px;margin-left: 15px;font-weight: lighter;">技术栈分类>></span>
+            <span style="line-height: 60px;font-size: 20px;margin-left: 15px;font-weight: lighter;">文章列表>></span>
           </div>
         </el-col>
       </el-row>
     </el-container>
     <el-container>
-      <el-row :gutter="3" style="margin-top: 5px">
-        <el-col :span="4" v-for="(item, index) in stackList" :key="index" :offset="index % 5 == 0 ? 0 : 1">
+      <el-row :gutter="5" style="margin-top: 5px">
+        <el-col :span="10" v-for="(item, index) in stackList" :key="index" :offset=2>
           <el-card :body-style="{ padding: '0px',margin: '20px',height: '150px'}" shadow="hover">
-            <img v-bind:src=item.img class="image">
             <div style="padding: 5px;">
-              <span>{{item.name}}</span>
-              <div class="bottom clearfix">
-                <time class="time">{{ item.describe }}</time>
-                <el-button type="text" class="button">详情信息</el-button>
+              <div style="width: 20%;height: 150px;float: left">
+                <img v-bind:src=item.img style="width: 100%;height: 100%;">
+              </div>
+            <!--内容div-->
+              <div style="border: red 0px solid; float: left;height: 150px;padding: 0px 5px;width: 78%;text-align: left">
+                <div style="line-height: 0px;margin-bottom: 0px;"><h3><span>标题：{{item.name}}</span></h3></div>
+                <div style="clear:both;height: auto;line-height: 20px">
+                  <div>
+                    <p><strong>摘要：</strong>{{ textData}}</p>
+                  </div>
+                  <div style="clear: both">
+                    <span>posted @ 2018-07-10 23:16 麦奇 阅读 (27821) 评论 (1)</span>
+                    <el-button type="text" class="button">阅读全文</el-button>
+                  </div>
+                </div>
               </div>
             </div>
           </el-card>
@@ -90,14 +100,15 @@
     </el-container>
     <el-container class="page">
       <el-row type="flex" justify="center">
-        <nav style="text-align: center">
+        <nav>
           <el-col center="true">
             <el-pagination
               background
               layout="prev, pager, next"
               :total="1000">
             </el-pagination>
-          </el-col></nav>
+          </el-col>
+        </nav>
       </el-row>
     </el-container>
   </div>
@@ -109,6 +120,8 @@ export default {
     return {
       activeIndex: '1',
       activeIndex2: '1',
+      textData: 'Apache Thrift软件框架（用于可扩展的跨语言服务开发）将软件堆栈与代码生成引擎结合在一起，以构建可在C ++，Java，Python，PHP，Ruby，Erlang，Perl，Haskell，C＃，可可，JavaScript，Node.js，Smalltalk，OCaml和Delphi等语言。\n' +
+        'Thrift是Facebook开发的一个软件库和一套代码生成工具，用于加快高效且可扩展的后端服务。',
       currentDate: new Date(),
       stackList: [
         {name: 'Docker应用技术', img: '/static/images/catalog/docker.jpg', describe: 'Docker应用技术'},
@@ -127,6 +140,9 @@ export default {
   methods: {
     handleSelect (key, keyPath) {
       console.log(key, keyPath)
+    },
+    detail () {
+      this.$router.push('/blogs')
     }
   }
 }
@@ -145,7 +161,7 @@ export default {
   line-height: 50px;
 }
 .page{
-  padding: 20px;
+  /*padding: 20px;*/
   line-height: 20px;
 }
   .el-carousel__item:nth-child(2n) {
@@ -186,7 +202,7 @@ export default {
     clear: both
   }
   .bg-purple-dark {
-    background: #99a9bf;
+    background-color: rgb(84, 92, 100);;
     width: 100%;
   }
   .grid-content {
@@ -210,6 +226,6 @@ export default {
     color: #303133;
     -webkit-transition: .3s;
     transition: .3s;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 </style>
