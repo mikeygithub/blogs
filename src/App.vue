@@ -2,9 +2,9 @@
   <transition name="fade">
   <div id="app">
     <el-container>
-<!--      <el-aside v-show="asideVisible" width="320px">-->
+      <!--<el-aside>-->
 <!--        <Left></Left>-->
-<!--      </el-aside>-->
+      <!--</el-aside>-->
       <el-container>
         <el-header>
           <Top></Top>
@@ -68,7 +68,6 @@ a {
   background-color: #545c64;
   color: #333;
   text-align: center;
-  /*line-height: 200px;*/
 }
 .hideSidebar {
   width: 50px !important;
@@ -92,5 +91,12 @@ body > .el-container {
 
 .el-container:nth-child(7) .el-aside {
   line-height: 320px;
+}
+.el-footer {
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
 }
 </style>

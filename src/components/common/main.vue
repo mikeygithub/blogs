@@ -1,7 +1,34 @@
 <template>
   <div>
     <div class="main-top">
-
+      <div style="z-index: 999;">
+        <el-row>
+          <el-col>
+            <div style="padding-top: 100px">
+              <h1 style="line-height: 1.1;font-weight: 700;font-size: 80px;color: aliceblue">麦奇的博客</h1>
+              <span style="color: #fff;font-size: 20px">学习 生活 分享</span>
+            </div>
+          </el-col>
+        </el-row>
+      </div>
+      <vue-particles
+        color="#dedede"
+        :particleOpacity="0.7"
+        :particlesNumber="80"
+        shapeType="circle"
+        :particleSize="4"
+        linesColor="#dedede"
+        :linesWidth="1"
+        :lineLinked="true"
+        :lineOpacity="0.4"
+        :linesDistance="150"
+        :moveSpeed="3"
+        :hoverEffect="true"
+        hoverMode="grab"
+        :clickEffect="true"
+        clickMode="push"
+      >
+      </vue-particles>
     </div>
     <!--<div>-->
       <!--<el-carousel :interval="4000" type="card" height="400px">-->
@@ -10,31 +37,15 @@
         <!--</el-carousel-item>-->
       <!--</el-carousel>-->
     <!--</div>-->
-    <el-container>
+    <el-container style="margin: 0px;">
       <el-row style="width: 100%">
         <el-col :span="24">
           <div class="grid-content bg-purple-dark" style="text-align: left">
-            <span style="line-height: 60px;font-size: 20px;margin-left: 15px;font-weight: lighter;" @click="detail">技术栈分类>></span>
+            <span style="line-height: 60px;font-size: 20px;margin-left: 15px;font-weight: bold;color: aliceblue" @click="detail">技术栈分类>></span>
           </div>
         </el-col>
       </el-row>
     </el-container>
-  <!--<el-container>-->
-    <!--<el-row :gutter="12" style="margin-top: 5px">-->
-      <!--<el-col :span="4" v-for="(o, index) in 10" :key="o" :offset="index % 5 == 0 ? 0 : 1">-->
-        <!--<el-card :body-style="{ padding: '0px',margin: '20px' }" shadow="hover">-->
-          <!--<img :src=IMG class="image">-->
-          <!--<div style="padding: 5px;">-->
-            <!--<span>Docker技术应用</span>-->
-            <!--<div class="bottom clearfix">-->
-              <!--<time class="time">{{ currentDate }}</time>-->
-              <!--<el-button type="text" class="button">详情信息>></el-button>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</el-card>-->
-      <!--</el-col>-->
-    <!--</el-row>-->
-  <!--</el-container>-->
     <el-container>
       <el-row :gutter="3" style="margin-top: 5px">
         <el-col :span="4" v-for="(item, index) in stackList" :key="index" :offset="index % 5 == 0 ? 0 : 1">
@@ -63,18 +74,19 @@
           </el-col></nav>
       </el-row>
     </el-container>
-    <el-container>
+    <el-container  style="margin: 0px;">
       <el-row style="width: 100%">
         <el-col :span="24">
           <div class="grid-content bg-purple-dark" style="text-align: left">
-            <span style="line-height: 60px;font-size: 20px;margin-left: 15px;font-weight: lighter;">文章列表>></span>
+            <span style="line-height: 60px;font-size: 20px;margin-left: 15px;font-weight: bold;color: aliceblue">文章列表>></span>
           </div>
         </el-col>
       </el-row>
     </el-container>
+    <!--TODO:浮动布局-->
     <el-container>
-      <el-row :gutter="5" style="margin-top: 5px">
-        <el-col :span="10" v-for="(item, index) in stackList" :key="index" :offset=2>
+      <el-row :gutter="20" style="margin-top: 5px">
+        <el-col :span="10" v-for="(item, index) in stackList" :key="index" :offset="index % 2 == 0 ? 2 : 0">
           <el-card :body-style="{ padding: '0px',margin: '20px',height: '150px'}" shadow="hover">
             <div style="padding: 5px;">
               <div style="width: 20%;height: 150px;float: left">
@@ -161,7 +173,6 @@ export default {
   line-height: 50px;
 }
 .page{
-  /*padding: 20px;*/
   line-height: 20px;
 }
   .el-carousel__item:nth-child(2n) {
@@ -206,10 +217,10 @@ export default {
     width: 100%;
   }
   .grid-content {
-    border-radius: 4px;
+    border-radius: 10px;
     min-height: 40px;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     align-content: center;
   }
   .main-top{

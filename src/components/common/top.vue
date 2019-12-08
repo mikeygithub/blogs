@@ -7,7 +7,9 @@
         :show-close="false"
         direction="ltr"
         :with-header="true">
+        <div>
           <left></left>
+        </div>
       </el-drawer>
     </div>
   <div>
@@ -15,9 +17,8 @@
       :visible.sync="drawer"
       :show-close="false"
       :with-header="true">
-      <div style="background:red;">
-        <!--<about></about>-->
-        <h1>Hello</h1>
+      <div>
+        <about></about>
       </div>
     </el-drawer>
   </div>
@@ -59,17 +60,12 @@ export default {
   components: {Left, About},
   data () {
     return {
-      info: true,
+      info: false,
       drawer: false,
       activeIndex2: '2'
     }
   },
   methods: {
-    changeAsideVisible () {
-      console.log(this.asideVisible)
-      this.asideVisible = !this.asideVisible
-      console.log(this.asideVisible)
-    },
     handleSelect () {},
     home () {
       this.$router.push('/')
@@ -99,5 +95,18 @@ export default {
    margin-bottom: 0px;
    padding: 0px 0px ;
 }
-
+>>>.el-drawer {
+  /*position: absolute;*/
+  /*-webkit-box-sizing: border-box;*/
+  /*box-sizing: border-box;*/
+  background-color: rgb(84, 92, 100);
+  /*display: -webkit-box;*/
+  /*display: -ms-flexbox;*/
+  /*display: flex;*/
+  /*-webkit-box-orient: vertical;*/
+  /*-ms-flex-direction: column;*/
+  /*flex-direction: column;*/
+  /*-webkit-box-shadow: 0 8px 10px -5px rgba(0,0,0,.2), 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12);*/
+  /*box-shadow: 0 8px 10px -5px rgba(0,0,0,.2), 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12);*/
+}
 </style>

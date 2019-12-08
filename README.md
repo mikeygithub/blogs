@@ -1,33 +1,30 @@
-# 个人技术博客网站前端
-
+个人技术博客网站前端
+ ============================  
 > the html5 homework demo
 
-## Build Setup
 
-``` bash
-# install dependencies
-npm install
+**项目说明**  
 
-# serve with hot reload at localhost:8080
-npm run dev
+``个人技术博客网站前端 ``  
 
-# build for production with minification
-npm run build
+**构建项目**
 
-# build for production and view the bundle analyzer report
-npm run build --report
+````text
+1.下载相关依赖： npm install   
+2.编译项目： npm run build
+3.打包镜像： docker build -t mikeyboom/blogs:v1.0.0 .
+3.推送到仓库： docker push mikeyboom/blogs:v1.0.0
+````
 
-# run unit tests
-npm run unit
+**部署项目**  
 
-# run e2e tests
-npm run e2e
+```text
+1.下拉镜像： docker pull mikeyboom/blogs:v1.0.0
+2.运行容器： docker run --name blogs-vue-[datatime] -p 8003:8003 <imageId>
+```
 
-# run all tests
-npm test
 ```
 规定技术点
-==========
 1. 站点结构
   1）合理设计网站结构， 安排栏目；
   2）合理布局

@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="left">
     <el-row class="title">
       <el-col :span="24">
-      <h1>阿姆斯特朗</h1>
+      <h1>麦奇的博客</h1>
       </el-col>
     </el-row>
     <div class="info">
@@ -67,7 +67,7 @@
     </el-container>
     <el-divider>分类标签</el-divider>
     <div class="tag">
-      <el-tag style="margin: 5px;"
+      <el-tag style="margin: 5px 10px;"
         v-for="tag in tags"
         :key="tag.name"
         :type="tag.type">
@@ -261,21 +261,21 @@
           </el-table-column>
         </el-table>
     </div>
-    <el-divider>最新文章</el-divider>
-    <div class="article">
-      <el-table
-        size="small"
-        align="right"
-        :show-header="false"
-        :data="tableData"
-        style="width: 100%">
-        <el-table-column>
-          <template slot-scope="scope">
-            <el-link type="success"><i class="el-icon-document"></i><span v-text="scope.row.address"></span></el-link>
-          </template>
-        </el-table-column>
-      </el-table>
-    </div>
+    <!--<el-divider>最新文章</el-divider>-->
+    <!--<div class="article">-->
+      <!--<el-table-->
+        <!--size="small"-->
+        <!--align="right"-->
+        <!--:show-header="false"-->
+        <!--:data="tableData"-->
+        <!--style="width: 100%">-->
+        <!--<el-table-column>-->
+          <!--<template slot-scope="scope">-->
+            <!--<el-link type="success"><i class="el-icon-document"></i><span v-text="scope.row.address"></span></el-link>-->
+          <!--</template>-->
+        <!--</el-table-column>-->
+      <!--</el-table>-->
+    <!--</div>-->
   </div>
 </template>
 
@@ -313,15 +313,15 @@ export default {
         { name: 'docker4', type: 'warning' }
       ],
       tableData: [{
-        address: '同步/异步/阻塞/非阻塞/BIO/NIO/AIO'
-      }, {
-        address: '部署你的ASP.NET Core应用到k8s集群'
-      }, {
-        address: 'Python为例的Async/Await的编程基础'
-      }, {
-        address: '使用HttpReports快速搭建API分析平台'
-      }, {
         address: '分布式之数据库和缓存双写一致性方案解析'
+      // }, {
+      //   address: '部署你的ASP.NET Core应用到k8s集群'
+      // }, {
+      //   address: 'Python为例的Async/Await的编程基础'
+      // }, {
+      //   address: '使用HttpReports快速搭建API分析平台'
+      // }, {
+      //   address: '同步/异步/阻塞/非阻塞/BIO/NIO/AIO'
       }]
     }
   },
@@ -336,6 +336,9 @@ export default {
 }
 </script>
 <style scoped>
+  .left{
+    background: rgb(84, 92, 100);
+  }
   .el-menu {
     border-right: solid 0px #e6e6e6;
     list-style: none;
@@ -351,7 +354,7 @@ export default {
     font-size: 20px;
   }
   .title h1{
-    margin: 0 0px;
+    margin: 0 60px;
     font-weight: 700;
   }
   .info{
@@ -359,11 +362,12 @@ export default {
     background: url('~@/assets/images/head_bg.gif') center center/100% no-repeat rgb(0, 0, 0);
   }
   .profile_block {
-    padding: 15px;
+    padding-top: 15px;
+    padding-left: 120px;
     color: #ffffff;
     font-size: 15px;
     line-height: 1.5;
-    margin-top: 0 !important;
+    margin-top: 0px;
   }
   .introduce-via img {
     width: 66px;
@@ -373,7 +377,8 @@ export default {
     box-shadow: inset 1px 1px 4px rgba(0,0,0,0.3), 0 2px 3px rgba(0,0,0,0.4);
   }
   .introduce-head{
-    padding: 15px;
+    padding-top: 20px;
+    padding-left: 125px;
   }
   .time {
     margin: 10px;
@@ -397,19 +402,20 @@ export default {
   .el-divider__text {
     position: absolute;
     background-color: #545c64;
-    padding: 0 20px;
+    padding: 0 10px;
     color: #303133;
   }
   .time a{
     color: #333333;
   }
  >>> .el-input-group__append,>>> .el-input-group__prepend {
-     background-color: transparent;
-  }
+   background-color: rgb(84, 92, 100);
+ }
  >>> .el-input__inner {
     -webkit-appearance: none;
     background-color: transparent;
-    background-image: none;
+   /*background-color: rgb(84, 92, 100);*/
+   background-image: none;
     border-radius: 4px;
     border: 1px solid #DCDFE6;
     -webkit-box-sizing: border-box;
@@ -425,8 +431,9 @@ export default {
     transition: border-color .2s cubic-bezier(.645,.045,.355,1);
     width: 100%;
   }
-  >>>.el-table{
-    background: transparent;
+  .el-table{
+    /*background: transparent;*/
+    background-color: rgb(84, 92, 100);
   }
   >>>.el-table td, .el-table th {
     padding: 10px 0;
@@ -436,6 +443,6 @@ export default {
     vertical-align: middle;
     text-align: center;
     background-color: rgb(84, 92, 100);
-    border-radius: 10px;
+    border-radius: 0px;
   }
 </style>

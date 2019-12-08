@@ -6,6 +6,10 @@ import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 import App from './App'
 import router from './router'
+import VueAnime from 'vue-animejs'
+import VueParticles from 'vue-particles'
+Vue.use(VueParticles)
+Vue.use(VueAnime)
 Vue.use(ElementUI)
 Vue.config.productionTip = false
 // 挂载全局
