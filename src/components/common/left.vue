@@ -354,7 +354,7 @@ export default {
     font-size: 20px;
   }
   .title h1{
-    margin: 0 60px;
+    margin: 0 80px;
     font-weight: 700;
   }
   .info{

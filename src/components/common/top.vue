@@ -1,16 +1,18 @@
 <template>
   <div>
     <div>
-      <el-drawer
-        :visible.sync="info"
-        size="320px"
-        :show-close="false"
-        direction="ltr"
-        :with-header="true">
-        <div>
-          <left></left>
-        </div>
-      </el-drawer>
+      <transition enter-active-class="zoomIn" leave-active-class="zoomOut">
+        <el-drawer
+          :visible.sync="info"
+          size="320px"
+          :show-close="false"
+          direction="ltr"
+          :with-header="true">
+          <div class="animated">
+            <left></left>
+          </div>
+        </el-drawer>
+      </transition>
     </div>
   <div>
     <el-drawer
@@ -22,6 +24,8 @@
       </div>
     </el-drawer>
   </div>
+    <!-- TODO:音频 -->
+    <audio src="/static/audio/hanliulaixi.mp3" id="eventAudio"></audio>
   <div class="collapse navbar-collapse" id="navbar-collapse-1">
     <el-menu
       :default-active="activeIndex2"
@@ -36,32 +40,61 @@
       </el-menu-item>
       <el-submenu index="2">
         <template slot="title"><i class="el-icon-s-platform"></i>我的工作台</template>
-        <el-menu-item index="2-1">选项1</el-menu-item>
+        <el-menu-item index="2-1" @click="dialogVisible = true">登入后台</el-menu-item>
         <el-menu-item index="2-2">选项2</el-menu-item>
-        <el-menu-item index="2-3">选项3</el-menu-item>
       </el-submenu>
       <el-submenu index="5">
         <template slot="title"><i class="el-icon-s-tools"></i>设置</template>
-        <el-menu-item index="2-1">选项1</el-menu-item>
-        <el-menu-item index="2-2">选项2</el-menu-item>
-        <el-menu-item index="2-3">选项3</el-menu-item>
+        <el-menu-item index="2-1" @click="audioplay">开启音乐</el-menu-item>
+        <el-menu-item index="2-1" @click="audiostop">关闭音乐</el-menu-item>
       </el-submenu>
       <el-menu-item index="4"><a href="#" @click="drawer = true"><i class="el-icon-user-solid"></i>关于作者</a></el-menu-item>
       <el-menu-item index="3"><a href="#" @click="home"><i class="el-icon-s-home"></i>首页</a></el-menu-item>
     </el-menu>
   </div>
+    <el-dialog
+      title="登入"
+      :visible.sync="dialogVisible"
+      width="30%"
+      :before-close="handleClose">
+      <div>
+        <!--<login></login>-->
+        <form action="#">
+          <table align="center">
+            <tr>
+              <td class="label">账号</td>
+              <td><input class="el-input" type="email" required /></td>
+            </tr>
+            <tr>
+              <td>密码</td>
+              <td><input class="el-input" type="password"  required /></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input class="el-button" type="submit" value="提交"/></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <span slot="footer" class="dialog-footer">
+    <el-button @click="dialogVisible = false">取 消</el-button>
+    <!--<el-button type="primary" @click="dialogVisible = false">确 定</el-button>-->
+  </span>
+    </el-dialog>
   </div>
 </template>
 <script>
 import About from './about'
 import Left from './left'
+import Login from '../system/login'
+
 export default {
   name: 'top',
-  components: {Left, About},
+  components: {Login, Left, About},
   data () {
     return {
       info: false,
       drawer: false,
+      dialogVisible: false,
       activeIndex2: '2'
     }
   },
@@ -69,6 +102,14 @@ export default {
     handleSelect () {},
     home () {
       this.$router.push('/')
+    },
+    audioplay () {
+      let btnAdo = document.getElementById('eventAudio')
+      btnAdo.play()
+    },
+    audiostop () {
+      let btnAdo = document.getElementById('eventAudio')
+      btnAdo.pause()
     }
   }
 }

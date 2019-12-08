@@ -8,6 +8,8 @@ import App from './App'
 import router from './router'
 import VueAnime from 'vue-animejs'
 import VueParticles from 'vue-particles'
+import animate from 'animate.css'
+Vue.use(animate)
 Vue.use(VueParticles)
 Vue.use(VueAnime)
 Vue.use(ElementUI)

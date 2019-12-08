@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="main-top">
-      <div style="z-index: 999;">
+      <div style="z-index:-1;">
         <el-row>
           <el-col>
             <div style="padding-top: 100px">
@@ -11,24 +11,25 @@
           </el-col>
         </el-row>
       </div>
-      <vue-particles
-        color="#dedede"
-        :particleOpacity="0.7"
-        :particlesNumber="80"
-        shapeType="circle"
-        :particleSize="4"
-        linesColor="#dedede"
-        :linesWidth="1"
-        :lineLinked="true"
-        :lineOpacity="0.4"
-        :linesDistance="150"
-        :moveSpeed="3"
-        :hoverEffect="true"
-        hoverMode="grab"
-        :clickEffect="true"
-        clickMode="push"
-      >
-      </vue-particles>
+      <div>
+        <vue-particles
+          color="#dedede"
+          :particleOpacity="0.7"
+          :particlesNumber="80"
+          shapeType="circle"
+          :particleSize="4"
+          linesColor="#dedede"
+          :linesWidth="1"
+          :lineLinked="true"
+          :lineOpacity="0.4"
+          :linesDistance="150"
+          :moveSpeed="3"
+          :hoverEffect="true"
+          hoverMode="grab"
+          :clickEffect="true"
+          clickMode="push">
+        </vue-particles>
+      </div>
     </div>
     <!--<div>-->
       <!--<el-carousel :interval="4000" type="card" height="400px">-->

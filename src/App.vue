@@ -2,9 +2,6 @@
   <transition name="fade">
   <div id="app">
     <el-container>
-      <!--<el-aside>-->
-<!--        <Left></Left>-->
-      <!--</el-aside>-->
       <el-container>
         <el-header>
           <Top></Top>
@@ -25,7 +22,6 @@ export default {
   components: {Top, Left, Footer},
   data: function () {
     return {
-      asideVisible: true
     }
   }
 }
