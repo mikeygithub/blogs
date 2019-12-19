@@ -32,7 +32,7 @@
       class="el-menu-demo"
       mode="horizontal"
       @select="handleSelect"
-      background-color="#545c64"
+      background-color="#169fe6"
       text-color="#fff"
       active-text-color="#ffd04b">
       <el-menu-item index="1"  style="float: left" @click="info=!info">
@@ -137,17 +137,6 @@ export default {
    padding: 0px 0px ;
 }
 >>>.el-drawer {
-  /*position: absolute;*/
-  /*-webkit-box-sizing: border-box;*/
-  /*box-sizing: border-box;*/
   background-color: rgb(84, 92, 100);
-  /*display: -webkit-box;*/
-  /*display: -ms-flexbox;*/
-  /*display: flex;*/
-  /*-webkit-box-orient: vertical;*/
-  /*-ms-flex-direction: column;*/
-  /*flex-direction: column;*/
-  /*-webkit-box-shadow: 0 8px 10px -5px rgba(0,0,0,.2), 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12);*/
-  /*box-shadow: 0 8px 10px -5px rgba(0,0,0,.2), 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12);*/
 }
 </style>

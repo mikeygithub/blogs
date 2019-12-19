@@ -11,75 +11,32 @@
           </el-col>
         </el-row>
       </div>
-      <!--<div>-->
-        <!--<vue-particles-->
-          <!--color="#dedede"-->
-          <!--:particleOpacity="0.7"-->
-          <!--:particlesNumber="80"-->
-          <!--shapeType="circle"-->
-          <!--:particleSize="4"-->
-          <!--linesColor="#dedede"-->
-          <!--:linesWidth="1"-->
-          <!--:lineLinked="true"-->
-          <!--:lineOpacity="0.4"-->
-          <!--:linesDistance="150"-->
-          <!--:moveSpeed="3"-->
-          <!--:hoverEffect="true"-->
-          <!--hoverMode="grab"-->
-          <!--:clickEffect="true"-->
-          <!--clickMode="push">-->
-        <!--</vue-particles>-->
-      <!--</div>-->
+      <div>
+        <vue-particles
+          color="#dedede"
+          :particleOpacity="0.7"
+          :particlesNumber="80"
+          shapeType="circle"
+          :particleSize="4"
+          linesColor="#dedede"
+          :linesWidth="1"
+          :lineLinked="true"
+          :lineOpacity="0.4"
+          :linesDistance="150"
+          :moveSpeed="3"
+          :hoverEffect="true"
+          hoverMode="grab"
+          :clickEffect="true"
+          clickMode="push">
+        </vue-particles>
+      </div>
     </div>
-    <!--<div>-->
-    <!--<el-carousel :interval="4000" type="card" height="400px">-->
-    <!--<el-carousel-item v-for="item in 6" :key="item">-->
-    <!--<h3><img :src=BLOCKCHAIN class="image"></h3>-->
-    <!--</el-carousel-item>-->
-    <!--</el-carousel>-->
-    <!--</div>-->
-    <!--<el-container style="margin: 0px;">-->
-    <!--<el-row style="width: 100%">-->
-    <!--<el-col :span="24">-->
-    <!--<div class="grid-content bg-purple-dark" style="text-align: left">-->
-    <!--<span style="line-height: 60px;font-size: 20px;margin-left: 15px;font-weight: bold;color: aliceblue" @click="detail">技术栈分类>></span>-->
-    <!--</div>-->
-    <!--</el-col>-->
-    <!--</el-row>-->
-    <!--</el-container>-->
-    <!--<el-container>-->
-    <!--<el-row :gutter="3" style="margin-top: 5px">-->
-    <!--<el-col :span="4" v-for="(item, index) in stackList" :key="index" :offset="index % 5 == 0 ? 0 : 1">-->
-    <!--<el-card :body-style="{ padding: '0px',margin: '20px',height: '150px'}" shadow="hover">-->
-    <!--<img v-bind:src=item.img class="image">-->
-    <!--<div style="padding: 5px;">-->
-    <!--<span>{{item.name}}</span>-->
-    <!--<div class="bottom clearfix">-->
-    <!--<time class="time">{{ item.describe }}</time>-->
-    <!--<el-button type="text" class="button" @click="detail">详情信息</el-button>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</el-card>-->
-    <!--</el-col>-->
-    <!--</el-row>-->
-    <!--</el-container>-->
-    <!--<el-container class="page">-->
-    <!--<el-row type="flex" justify="center">-->
-    <!--<nav style="text-align: center">-->
-    <!--<el-col center="true">-->
-    <!--<el-pagination-->
-    <!--background-->
-    <!--layout="prev, pager, next"-->
-    <!--:total="1000">-->
-    <!--</el-pagination>-->
-    <!--</el-col></nav>-->
-    <!--</el-row>-->
-    <!--</el-container>-->
     <el-container style="margin: 0px;">
-      <el-row style="width: 100%;margin-top: -10px">
+      <el-row style="width: 100%">
         <el-col :span="24">
-          <div class="grid-content bg-purple-dark" style="text-align: left;border-top-left-radius: 0px;border-top-right-radius: 0px">
-            <span style="line-height: 60px;font-size: 20px;margin-left: 15px;font-weight: bold;color: aliceblue">文章列表>></span>
+          <div class="grid-content bg-purple-dark" style="text-align: left">
+            <span
+              style="line-height: 60px;font-size: 20px;margin-left: 15px;font-weight: bold;color: aliceblue">文章列表>></span>
           </div>
         </el-col>
       </el-row>
@@ -105,7 +62,7 @@
                       </div>
                       <div style="clear: both">
                         <span>posted @ 2018-07-10 23:16 麦奇 阅读 (27821) 评论 (1)</span>
-                        <el-button type="text" class="button" @click="detail">阅读全文</el-button>
+                        <el-button type="text" class="button">阅读全文</el-button>
                       </div>
                     </div>
                   </div>
@@ -117,63 +74,41 @@
       </div>
       <div style="width: 20%;height:2100px;border-radius:5px;background-color:#fff;float: left;margin:15px 0px;padding: 0px 0px">
         <div id="sideBarMain">
-
           <div id="sidebar_news" class="newsItem" style="padding-top: 0px;"><!--done-->
-            <h3 style="padding-top: 0px;line-height: 40px;margin-top: 0px;" class="catListTitle">公告</h3>
-
+            <h3 style="padding-top: 0px" class="catListTitle">公告</h3>
             <div id="blog-news">
-
               <title>Live2d Test Env</title>
-
-              <!--<script type="text/javascript">window['__document_write_ajax_callbacks__']['5']();</script>-->
-              <!--<script type="text/javascript">window['__document_write_ajax_callbacks__']['6']();</script>-->
-              <!--<script defer="">window['__document_write_ajax_callbacks__']['1']();</script>-->
-              <!--<div style="display: none" id="__document_write_ajax_div-2"></div>-->
-              <!--<script type="text/javascript">window['__document_write_ajax_callbacks__']['2']();</script>-->
-              <!--<script type="text/javascript">window['__document_write_ajax_callbacks__']['8']();</script>-->
-              <!--<script type="text/javascript">window['__document_write_ajax_callbacks__']['9']();</script>-->
-              <!--<script type="text/javascript" defer="">window['__document_write_ajax_callbacks__']['3']();</script>-->
-
               <div id="profile_block">
                 昵称：麦奇
-                <!--<a href="https://home.cnblogs.com/u/biaogejiushibiao/">-->
-                  <!--麦奇-->
-                <!--</a>-->
                 <br>
                 园龄：3年7个月
-                <!--<a href="https://home.cnblogs.com/u/biaogejiushibiao/" title="入园时间：2018-05-12">-->
-                  <!--3年7个月-->
-                <!--</a>-->
                 <br>
                 粉丝：120
-                <!--<a href="https://home.cnblogs.com/u/biaogejiushibiao/followers/">-->
-                  <!--12-->
-                <!--</a>-->
                 <br>
                 关注：50
-                <!--<a href="https://home.cnblogs.com/u/biaogejiushibiao/followees/">-->
-                  <!--26-->
-                <!--</a>-->
                 <div id="p_b_follow"></div>
-                <!--<script type="text/javascript">window['__document_write_ajax_callbacks__']['10']();</script>-->
-                <!--<script>window['__document_write_ajax_callbacks__']['4']();</script>-->
               </div>
             </div>
-
           </div>
-
           <div id="blog-calendar" style="">
-
             <table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
               <tbody>
               <tr>
-                      <td class="CalNextPrev" colspan="2">
+                <td colspan="7">
+                  <table class="CalTitle" cellspacing="0" border="0">
+                    <tbody>
+                    <tr>
+                      <td class="CalNextPrev">
                         <a href="javascript:void(0);" onclick="loadBlogCalendar('2019/11/19'); return false;">&lt;</a>
                       </td>
-                      <td align="center" colspan="3" style="display: table-cell;vertical-align: inherit;text-align: -webkit-center;">2019年12月</td>
-                      <td align="center" colspan="2" class="CalNextPrev">
+                      <td align="center">2019年12月</td>
+                      <td align="right" class="CalNextPrev">
                         <a href="javascript:void(0);" onclick="loadBlogCalendar('2020/01/19'); return false;">&gt;</a>
                       </td>
+                    </tr>
+                    </tbody>
+                  </table>
+                </td>
               </tr>
               <tr>
                 <th class="CalDayHeader" align="center" abbr="日" scope="col">日</th>
@@ -381,33 +316,23 @@
                   <h3 class="catListTitle">最新随笔</h3>
                   <ul>
                     <li>
-
                       <a href="https://www.cnblogs.com/biaogejiushibiao/p/12053557.html">1.Hyperledger Learning
                         Notes </a>
-
                     </li>
                     <li>
-
                       <a href="https://www.cnblogs.com/biaogejiushibiao/p/12037785.html">2.ECMAScript 6.0</a>
-
                     </li>
                     <li>
-
                       <a href="https://www.cnblogs.com/biaogejiushibiao/p/11838343.html">3.Blockchain technology and
                         Application</a>
-
                     </li>
                     <li>
-
                       <a href="https://www.cnblogs.com/biaogejiushibiao/p/11798978.html">4.Block Chain Learning Notes
                         Two</a>
-
                     </li>
                     <li>
-
                       <a href="https://www.cnblogs.com/biaogejiushibiao/p/11764271.html">5.Block Chain Learning Notes
                         One</a>
-
                     </li>
                     <li>
 
@@ -465,7 +390,6 @@
                 </div>
 
               </div>
-
               <!-- 阅读排行榜 -->
               <div id="sidebar_topviewedposts" class="sidebar-block">
                 <div class="catListView">
@@ -499,12 +423,18 @@
                       </li>
                       <li>
                         <a href="https://www.cnblogs.com/biaogejiushibiao/p/10148239.html">
-                          6. Mybatis注解开发(2247)
+                          6. Mybatis plus 插入数据时将自动递增的主键手动进行赋值设置(5023)
                         </a>
                       </li>
+                      <li>
+                        <a href="https://www.cnblogs.com/biaogejiushibiao/p/9998452.html">
+                          7. Vue日常报错(2342)
+                        </a>
+                      </li>>
                     </ul>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
@@ -524,8 +454,8 @@ export default {
       activeIndex: '1',
       activeIndex2: '1',
       textData: 'Apache Thrift软件框架（用于可扩展的跨语言服务开发）将软件堆栈与代码生成引擎结合在一起，以构建可在C ++，Java，Python，PHP，Ruby，Erlang，Perl，Haskell，C＃，可可，JavaScript，Node.js，Smalltalk，OCaml和Delphi等语言。' +
-        'Apache Thrift允许您在简单的定义文件中定义数据类型和服务接口。将该文件作为输入，编译器将生成用于轻松构建跨编程语言无缝通信的RPC客户端和服务器的代码。您无需编写大量的样板代码来序列化和传输对象并调用远程方法，而是可以开始工作。' +
-      'Apache Thrift 需要一个定义数据类型和服务接口的简单定义文件作为模板提供给代码生成引擎用来生成生成客户端代码和服务端代码，并以此实现客户端与服务端之间的跨语言的无缝通讯。我们就不用编写大量重复的模块化代码来序列化。',
+          'Apache Thrift允许您在简单的定义文件中定义数据类型和服务接口。将该文件作为输入，编译器将生成用于轻松构建跨编程语言无缝通信的RPC客户端和服务器的代码。您无需编写大量的样板代码来序列化和传输对象并调用远程方法，而是可以开始工作。' +
+          'Apache Thrift 需要一个定义数据类型和服务接口的简单定义文件作为模板提供给代码生成引擎用来生成生成客户端代码和服务端代码，并以此实现客户端与服务端之间的跨语言的无缝通讯。我们就不用编写大量重复的模块化代码来序列化。',
       currentDate: new Date(),
       stackList: [
         {name: 'Docker应用技术', img: '/static/images/catalog/docker.jpg', describe: 'Docker应用技术'},
@@ -626,9 +556,7 @@ export default {
   }
 
   .bg-purple-dark {
-    /*//TODO:修改颜色*/
-    /*background-color: rgb(84, 92, 100);*/
-    background-color: #169fe6;
+    background-color: rgb(84, 92, 100);
     width: 100%;
   }
 
@@ -660,12 +588,6 @@ export default {
   }
   /*右边信息栏*/
   #sideBar {
-    /*width: 290px;*/
-    /*margin-left: 20px;*/
-    /*float: left;*/
-    /*-o-text-overflow: ellipsis;*/
-    /*text-overflow: ellipsis;*/
-    /*overflow: visible;*/
     word-break: break-all;
   }
   .catListTitle {
@@ -675,9 +597,8 @@ export default {
     /*background-color: rgb(84, 92, 100);*/
     color: #fff;
     font-weight: normal;
-    border: #169fe6;
-    line-height: 30px;
     /*border: rgb(84, 92, 100);*/
+    border: #169fe6;
     border-radius: 5px;
   }
   #blog-news {
@@ -687,10 +608,9 @@ export default {
   #blog-news {
     overflow: hidden;
   }
-#blog-calendar{
-  margin-top: 10px;
-  line-height: 25px;
-}
+  #blog-calendar{
+    line-height: 25px;
+  }
   #blog-calendar .Cal {
     width: 100%;
   }
@@ -707,7 +627,7 @@ export default {
     border-color: inherit;
   }
   #sidebar_news {
-    line-height: 30px;
+    line-height: 25px;
   }
   #sideBarMain a {
     color: gray;
