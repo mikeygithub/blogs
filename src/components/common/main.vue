@@ -4,32 +4,32 @@
       <div style="z-index:-1;">
         <el-row>
           <el-col>
-            <div style="padding-top: 100px">
+            <div style="padding-top: 10px">
               <h1 style="line-height: 1.1;font-weight: 700;font-size: 80px;color: aliceblue">麦奇的博客</h1>
               <span style="color: #fff;font-size: 20px">学习 生活 分享</span>
             </div>
           </el-col>
         </el-row>
       </div>
-      <!--<div>-->
-        <!--<vue-particles-->
-          <!--color="#dedede"-->
-          <!--:particleOpacity="0.7"-->
-          <!--:particlesNumber="80"-->
-          <!--shapeType="circle"-->
-          <!--:particleSize="4"-->
-          <!--linesColor="#dedede"-->
-          <!--:linesWidth="1"-->
-          <!--:lineLinked="true"-->
-          <!--:lineOpacity="0.4"-->
-          <!--:linesDistance="150"-->
-          <!--:moveSpeed="3"-->
-          <!--:hoverEffect="true"-->
-          <!--hoverMode="grab"-->
-          <!--:clickEffect="true"-->
-          <!--clickMode="push">-->
-        <!--</vue-particles>-->
-      <!--</div>-->
+      <div>
+        <vue-particles
+          color="#dedede"
+          :particleOpacity="0.7"
+          :particlesNumber="80"
+          shapeType="circle"
+          :particleSize="4"
+          linesColor="#dedede"
+          :linesWidth="1"
+          :lineLinked="true"
+          :lineOpacity="0.4"
+          :linesDistance="150"
+          :moveSpeed="3"
+          :hoverEffect="true"
+          hoverMode="grab"
+          :clickEffect="true"
+          clickMode="push">
+        </vue-particles>
+      </div>
     </div>
     <!--<div>-->
     <!--<el-carousel :interval="4000" type="card" height="400px">-->
@@ -642,7 +642,9 @@ export default {
 
   .main-top {
     height: 500px;
-    background: url('~@/assets/images/bg_index.jpg') center center/100% no-repeat rgb(0, 0, 0);
+    /*background: url('~@/assets/images/bg_index.jpg') center center/100% no-repeat rgb(0, 0, 0);*/
+    /*background: url('~@/assets/images/title-yellow.png') center center/100% no-repeat #138cca;*/
+    background: url('~@/assets/images/title-yellow.png') center bottom no-repeat #138cca;
     padding-top: 0px;
   }
 
