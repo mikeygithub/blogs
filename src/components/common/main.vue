@@ -105,7 +105,7 @@
                       </div>
                       <div style="clear: both">
                         <span>posted @ 2018-07-10 23:16 麦奇 阅读 (27821) 评论 (1)</span>
-                        <el-button type="text" class="button" @click="detail">阅读全文</el-button>
+                        <el-button type="text" class="button" @click="blogInfo">阅读全文</el-button>
                       </div>
                     </div>
                   </div>
@@ -563,6 +563,9 @@ export default {
     },
     detail () {
       this.$router.push('/blogs')
+    },
+    blogInfo () {
+      this.$router.push('/blog-info')
     }
   }
 }

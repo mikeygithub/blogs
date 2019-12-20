@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Main from '@/components/common/main'
 import Blog from '@/components/blog/blogs'
+import BlogInfo from '@/components/blog/blog-info'
 
 // module.exports = file => require('@/components/' + file + '.vue').default
 
@@ -16,6 +17,10 @@ export default new Router({
     {
       path: '/blogs',
       component: Blog
+    },
+    {
+      path: '/blog-info',
+      component: BlogInfo
     }
   ]
 })
