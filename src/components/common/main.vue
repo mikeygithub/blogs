@@ -1,4 +1,5 @@
 <template>
+  <!--TODO:DIV布局-->
   <div>
     <div class="main-top">
       <div style="z-index:-1;">
@@ -11,6 +12,7 @@
           </el-col>
         </el-row>
       </div>
+      <!--TODO:css3动画-->
       <div>
         <vue-particles
           color="#dedede"
@@ -31,50 +33,6 @@
         </vue-particles>
       </div>
     </div>
-    <!--<div>-->
-    <!--<el-carousel :interval="4000" type="card" height="400px">-->
-    <!--<el-carousel-item v-for="item in 6" :key="item">-->
-    <!--<h3><img :src=BLOCKCHAIN class="image"></h3>-->
-    <!--</el-carousel-item>-->
-    <!--</el-carousel>-->
-    <!--</div>-->
-    <!--<el-container style="margin: 0px;">-->
-    <!--<el-row style="width: 100%">-->
-    <!--<el-col :span="24">-->
-    <!--<div class="grid-content bg-purple-dark" style="text-align: left">-->
-    <!--<span style="line-height: 60px;font-size: 20px;margin-left: 15px;font-weight: bold;color: aliceblue" @click="detail">技术栈分类>></span>-->
-    <!--</div>-->
-    <!--</el-col>-->
-    <!--</el-row>-->
-    <!--</el-container>-->
-    <!--<el-container>-->
-    <!--<el-row :gutter="3" style="margin-top: 5px">-->
-    <!--<el-col :span="4" v-for="(item, index) in stackList" :key="index" :offset="index % 5 == 0 ? 0 : 1">-->
-    <!--<el-card :body-style="{ padding: '0px',margin: '20px',height: '150px'}" shadow="hover">-->
-    <!--<img v-bind:src=item.img class="image">-->
-    <!--<div style="padding: 5px;">-->
-    <!--<span>{{item.name}}</span>-->
-    <!--<div class="bottom clearfix">-->
-    <!--<time class="time">{{ item.describe }}</time>-->
-    <!--<el-button type="text" class="button" @click="detail">详情信息</el-button>-->
-    <!--</div>-->
-    <!--</div>-->
-    <!--</el-card>-->
-    <!--</el-col>-->
-    <!--</el-row>-->
-    <!--</el-container>-->
-    <!--<el-container class="page">-->
-    <!--<el-row type="flex" justify="center">-->
-    <!--<nav style="text-align: center">-->
-    <!--<el-col center="true">-->
-    <!--<el-pagination-->
-    <!--background-->
-    <!--layout="prev, pager, next"-->
-    <!--:total="1000">-->
-    <!--</el-pagination>-->
-    <!--</el-col></nav>-->
-    <!--</el-row>-->
-    <!--</el-container>-->
     <el-container style="margin: 0px;">
       <el-row style="width: 100%;margin-top: -10px">
         <el-col :span="24">
@@ -97,13 +55,13 @@
                   </div>
                   <!--内容div-->
                   <div
-                    style="border: red 0px solid; float: left;height: 155px;padding: 0px 5px;width: 78%;text-align: left">
+                    style="border: red 0px solid; float: left;height: 155px;padding: 0px 5px;width: 78%;text-align: left;overflow: hidden">
                     <div style="line-height: 0px;margin-bottom: 0px;"><h3><span>标题：{{item.name}}</span></h3></div>
-                    <div style="clear:both;height: auto;line-height: 20px">
-                      <div>
-                        <p><strong>摘要：</strong>{{ textData}}</p>
+                    <div style="clear:both;height: auto;">
+                      <div style="overflow: hidden;height: 100px;">
+                        <p style="overflow:hidden;"><strong>摘要：</strong>{{ textData}}</p>
                       </div>
-                      <div style="clear: both">
+                      <div style="clear: both;margin-bottom: 0px;padding-bottom:0px;">
                         <span>posted @ 2018-07-10 23:16 麦奇 阅读 (27821) 评论 (1)</span>
                         <el-button type="text" class="button" @click="blogInfo">阅读全文</el-button>
                       </div>
@@ -164,6 +122,7 @@
 
           <div id="blog-calendar" style="">
 
+            <!--TODO:表格布局-->
             <table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
               <tbody>
               <tr>
@@ -629,7 +588,6 @@ export default {
   }
 
   .bg-purple-dark {
-    /*//TODO:修改颜色*/
     /*background-color: rgb(84, 92, 100);*/
     background-color: #169fe6;
     width: 100%;

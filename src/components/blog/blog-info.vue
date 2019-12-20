@@ -44,8 +44,8 @@
     </el-container>
     <!--TODO:浮动布局-->
     <div>
-      <div style="width: 70%;float: left;height: auto;margin: 15px 20px">
-        <!--TODO:博文详情 s-->
+      <div style="width: 70%;float: left;height: auto;margin: 15px 40px">
+        <!--博文详情 s-->
         <div id="topics">
           <div class="post">
             <h1 class="postTitle">
@@ -367,7 +367,7 @@ service PersonService {
               <a href="#">收藏</a></div>
           </div>
         </div>
-        <!--TODO:博文详情 e-->
+        <!--博文详情 e-->
       </div>
       <div
         style="width: 20%;height:auto;border-radius:5px;background-color:#fff;float: left;margin:15px 0px;padding: 0px 0px">
@@ -1116,7 +1116,6 @@ export default {
   }
 
   .bg-purple-dark {
-    /*//TODO:修改颜色*/
     background-color: #169fe6;
     width: 100%;
   }

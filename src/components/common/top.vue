@@ -41,17 +41,18 @@
       <el-submenu index="2">
         <template slot="title"><i class="el-icon-s-platform"></i>我的工作台</template>
         <el-menu-item index="2-1" @click="dialogVisible = true">登入后台</el-menu-item>
-        <el-menu-item index="2-2">选项2</el-menu-item>
+        <el-menu-item index="2-2">更多功能</el-menu-item>
       </el-submenu>
-      <el-submenu index="5">
+      <el-submenu index="3">
         <template slot="title"><i class="el-icon-s-tools"></i>设置</template>
-        <el-menu-item index="2-1" @click="audioplay">开启音乐</el-menu-item>
-        <el-menu-item index="2-1" @click="audiostop">关闭音乐</el-menu-item>
+        <el-menu-item index="3-1" @click="audioplay">开启音乐</el-menu-item>
+        <el-menu-item index="3-2" @click="audiostop">关闭音乐</el-menu-item>
       </el-submenu>
-      <el-menu-item index="4"><a href="#" @click="drawer = true"><i class="el-icon-user-solid"></i>关于作者</a></el-menu-item>
-      <el-menu-item index="3"><a href="#" @click="home"><i class="el-icon-s-home"></i>首页</a></el-menu-item>
+      <el-menu-item index="4"><a href="#" @click="drawer = true"><i class="el-icon-user-solid"></i>我的分享</a></el-menu-item>
+      <el-menu-item index="5"><a href="#" @click="home"><i class="el-icon-s-home"></i>首页</a></el-menu-item>
     </el-menu>
   </div>
+    <!--TODO:登入校验-->
     <el-dialog
       title="登入"
       :visible.sync="dialogVisible"
@@ -70,7 +71,7 @@
               <td><input class="el-input" type="password"  required /></td>
             </tr>
             <tr>
-              <td colspan="2"><input class="el-button" type="submit" value="提交"/></td>
+              <td colspan="2"><input class="el-button" type="submit" value="登入"/></td>
             </tr>
           </table>
         </form>

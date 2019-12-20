@@ -9,6 +9,10 @@ import router from './router'
 import VueAnime from 'vue-animejs'
 import VueParticles from 'vue-particles'
 import animate from 'animate.css'
+import VueVideoPlayer from 'vue-video-player'
+import 'video.js/dist/video-js.css'
+
+Vue.use(VueVideoPlayer)
 Vue.use(animate)
 Vue.use(VueParticles)
 Vue.use(VueAnime)
