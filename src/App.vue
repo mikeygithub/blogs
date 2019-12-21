@@ -2,6 +2,7 @@
   <transition name="fade">
   <div id="app">
     <el-container>
+      <!--TODO:fix布局-->
       <el-container>
         <el-header>
           <Top></Top>
@@ -47,7 +48,7 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #ffffff;
+  /*color: #ffffff;*/
 }
 .el-header {
   padding: 0 0px;

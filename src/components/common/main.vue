@@ -36,8 +36,10 @@
     <el-container style="margin: 0px;">
       <el-row style="width: 100%;margin-top: -10px">
         <el-col :span="24">
-          <div class="grid-content bg-purple-dark" style="text-align: left;border-top-left-radius: 0px;border-top-right-radius: 0px">
-            <span style="line-height: 60px;font-size: 20px;margin-left: 15px;font-weight: bold;color: aliceblue">文章列表>></span>
+          <div class="grid-content bg-purple-dark"
+               style="text-align: left;border-top-left-radius: 0px;border-top-right-radius: 0px">
+            <span
+              style="line-height: 60px;font-size: 20px;margin-left: 15px;font-weight: bold;color: aliceblue">文章列表>></span>
           </div>
         </el-col>
       </el-row>
@@ -47,11 +49,14 @@
       <div style="width: 70%;float: left">
         <el-container>
           <el-row :gutter="20" style="margin-top: 5px">
-            <el-col :span="20" v-for="(item, index) in stackList" :key="index" :offset="4">
+            <!--TODO:position: relative 相对布局-->
+            <el-col  :xs="24" :sm="24" :md="20" :lg="20" :xl="20" :span="20" v-for="(item, index) in stackList" :key="index" :offset="4">
               <el-card :body-style="{ padding: '0px',margin: '20px',height: '150px'}" shadow="hover">
                 <div style="padding: 5px;">
-                  <div style="width: 20%;height: 155px;float: left">
-                    <img v-bind:src=item.img style="width: 100%;height: 100%;">
+                  <div style="width: 20%;height: 155px;float: left" class="hidden-xs-only">
+                    <el-tooltip class="item" effect="dark" :content=item.name placement="top-end">
+                      <img v-bind:src=item.img style="width: 100%;height: 100%;">
+                    </el-tooltip>
                   </div>
                   <!--内容div-->
                   <div
@@ -59,11 +64,13 @@
                     <div style="line-height: 0px;margin-bottom: 0px;"><h3><span>标题：{{item.name}}</span></h3></div>
                     <div style="clear:both;height: auto;">
                       <div style="overflow: hidden;height: 100px;">
-                        <p style="overflow:hidden;"><strong>摘要：</strong>{{ textData}}</p>
+                        <p style="overflow:hidden;height: 80px;margin-top: 0px"><strong>摘要：</strong>{{ textData}}</p>
                       </div>
-                      <div style="clear: both;margin-bottom: 0px;padding-bottom:0px;">
-                        <span>posted @ 2018-07-10 23:16 麦奇 阅读 (27821) 评论 (1)</span>
-                        <el-button type="text" class="button" @click="blogInfo">阅读全文</el-button>
+                      <div style="clear: both;margin-bottom: 0px;padding-bottom:2px;">
+                        <span class="hidden-xs-only">posted @ 2018-07-10 23:16 麦奇 阅读 (27821) 评论 (1)</span>
+                        <el-tooltip class="item" effect="dark" content="点我查看博文详情" placement="top-end">
+                          <span style="float: right;color: #3a8ee6"><a @click="blogInfo">阅读全文</a></span>
+                        </el-tooltip>
                       </div>
                     </div>
                   </div>
@@ -73,7 +80,8 @@
           </el-row>
         </el-container>
       </div>
-      <div style="width: 20%;height:2100px;border-radius:5px;background-color:#fff;float: left;margin:15px 0px;padding: 0px 0px">
+      <div class="hidden-xs-only hidden-sm-only"
+        style="width: 20%;height:2100px;border-radius:5px;background-color:#fff;float: left;margin:15px 0px;padding: 0px 0px">
         <div id="sideBarMain">
 
           <div id="sidebar_news" class="newsItem" style="padding-top: 0px;"><!--done-->
@@ -95,22 +103,22 @@
               <div id="profile_block">
                 昵称：麦奇
                 <!--<a href="https://home.cnblogs.com/u/biaogejiushibiao/">-->
-                  <!--麦奇-->
+                <!--麦奇-->
                 <!--</a>-->
                 <br>
                 园龄：3年7个月
                 <!--<a href="https://home.cnblogs.com/u/biaogejiushibiao/" title="入园时间：2018-05-12">-->
-                  <!--3年7个月-->
+                <!--3年7个月-->
                 <!--</a>-->
                 <br>
                 粉丝：120
                 <!--<a href="https://home.cnblogs.com/u/biaogejiushibiao/followers/">-->
-                  <!--12-->
+                <!--12-->
                 <!--</a>-->
                 <br>
                 关注：50
                 <!--<a href="https://home.cnblogs.com/u/biaogejiushibiao/followees/">-->
-                  <!--26-->
+                <!--26-->
                 <!--</a>-->
                 <div id="p_b_follow"></div>
                 <!--<script type="text/javascript">window['__document_write_ajax_callbacks__']['10']();</script>-->
@@ -126,13 +134,15 @@
             <table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
               <tbody>
               <tr>
-                      <td class="CalNextPrev" colspan="2">
-                        <a href="javascript:void(0);" onclick="loadBlogCalendar('2019/11/19'); return false;">&lt;</a>
-                      </td>
-                      <td align="center" colspan="3" style="display: table-cell;vertical-align: inherit;text-align: -webkit-center;">2019年12月</td>
-                      <td align="center" colspan="2" class="CalNextPrev">
-                        <a href="javascript:void(0);" onclick="loadBlogCalendar('2020/01/19'); return false;">&gt;</a>
-                      </td>
+                <td class="CalNextPrev" colspan="2">
+                  <a href="javascript:void(0);" onclick="loadBlogCalendar('2019/11/19'); return false;">&lt;</a>
+                </td>
+                <td align="center" colspan="3"
+                    style="display: table-cell;vertical-align: inherit;text-align: -webkit-center;">2019年12月
+                </td>
+                <td align="center" colspan="2" class="CalNextPrev">
+                  <a href="javascript:void(0);" onclick="loadBlogCalendar('2020/01/19'); return false;">&gt;</a>
+                </td>
               </tr>
               <tr>
                 <th class="CalDayHeader" align="center" abbr="日" scope="col">日</th>
@@ -483,8 +493,8 @@ export default {
       activeIndex: '1',
       activeIndex2: '1',
       textData: 'Apache Thrift软件框架（用于可扩展的跨语言服务开发）将软件堆栈与代码生成引擎结合在一起，以构建可在C ++，Java，Python，PHP，Ruby，Erlang，Perl，Haskell，C＃，可可，JavaScript，Node.js，Smalltalk，OCaml和Delphi等语言。' +
-        'Apache Thrift允许您在简单的定义文件中定义数据类型和服务接口。将该文件作为输入，编译器将生成用于轻松构建跨编程语言无缝通信的RPC客户端和服务器的代码。您无需编写大量的样板代码来序列化和传输对象并调用远程方法，而是可以开始工作。' +
-      'Apache Thrift 需要一个定义数据类型和服务接口的简单定义文件作为模板提供给代码生成引擎用来生成生成客户端代码和服务端代码，并以此实现客户端与服务端之间的跨语言的无缝通讯。我们就不用编写大量重复的模块化代码来序列化。',
+          'Apache Thrift允许您在简单的定义文件中定义数据类型和服务接口。将该文件作为输入，编译器将生成用于轻松构建跨编程语言无缝通信的RPC客户端和服务器的代码。您无需编写大量的样板代码来序列化和传输对象并调用远程方法，而是可以开始工作。' +
+          'Apache Thrift 需要一个定义数据类型和服务接口的简单定义文件作为模板提供给代码生成引擎用来生成生成客户端代码和服务端代码，并以此实现客户端与服务端之间的跨语言的无缝通讯。我们就不用编写大量重复的模块化代码来序列化。',
       currentDate: new Date(),
       stackList: [
         {name: 'Docker应用技术', img: '/static/images/catalog/docker.jpg', describe: 'Docker应用技术'},
@@ -541,7 +551,7 @@ export default {
   }
 
   .el-card {
-    line-height: 50px;
+    line-height: 20px;
   }
 
   .page {
@@ -621,6 +631,7 @@ export default {
     transition: .3s;
     margin-bottom: 20px;
   }
+
   /*右边信息栏*/
   #sideBar {
     /*width: 290px;*/
@@ -631,6 +642,7 @@ export default {
     /*overflow: visible;*/
     word-break: break-all;
   }
+
   .catListTitle {
     font-size: 18px;
     padding: 10px 20px;
@@ -643,20 +655,25 @@ export default {
     /*border: rgb(84, 92, 100);*/
     border-radius: 5px;
   }
+
   #blog-news {
     overflow: visible;
     /*margin-bottom: 20px;*/
   }
+
   #blog-news {
     overflow: hidden;
   }
-#blog-calendar{
-  margin-top: 10px;
-  line-height: 25px;
-}
+
+  #blog-calendar {
+    margin-top: 10px;
+    line-height: 25px;
+  }
+
   #blog-calendar .Cal {
     width: 100%;
   }
+
   table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -664,20 +681,25 @@ export default {
     border-color: grey;
     display: table;
   }
+
   #blog-calendar tr {
     display: table-row;
     vertical-align: inherit;
     border-color: inherit;
   }
+
   #sidebar_news {
     line-height: 30px;
   }
+
   #sideBarMain a {
     color: gray;
   }
+
   #sideBar li {
     list-style: none;
   }
+
   .sidebar-block ul li {
     line-height: 2;
     border-bottom: 1px solid #e9e9e9;

@@ -11,6 +11,24 @@
                     :options="playerOptions0">
       </video-player>
     </div>
+    <div class='demo col-md-3'>
+      <!--<h6 class="wuliutitle">|&emsp;第四期</h6>-->
+      <!--TODO:视频信息-->
+      <video-player class="video-player vjs-custom-skin"
+                    ref="videoPlayer"
+                    :playsinline="true"
+                    :options="playerOptions0">
+      </video-player>
+    </div>
+    <div class='demo col-md-3'>
+      <!--<h6 class="wuliutitle">|&emsp;第四期</h6>-->
+      <!--TODO:视频信息-->
+      <video-player class="video-player vjs-custom-skin"
+                    ref="videoPlayer"
+                    :playsinline="true"
+                    :options="playerOptions0">
+      </video-player>
+    </div>
   </div>
 </template>
 

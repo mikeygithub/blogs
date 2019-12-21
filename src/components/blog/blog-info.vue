@@ -369,8 +369,8 @@ service PersonService {
         </div>
         <!--博文详情 e-->
       </div>
-      <div
-        style="width: 20%;height:auto;border-radius:5px;background-color:#fff;float: left;margin:15px 0px;padding: 0px 0px">
+      <div class="hidden-xs-only hidden-sm-only" style="width: 20%;height:auto;border-radius:5px;background-color:#fff;float: left;margin:15px 0px;padding: 0px 0px">
+       <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24" :span="20">
         <div id="sideBarMain">
 
           <div id="sidebar_news" class="newsItem" style="padding-top: 0px;"><!--done-->
@@ -1030,7 +1030,7 @@ service PersonService {
               </div>
             </div>
           </div>
-        </div>
+        </div></el-col>
       </div>
     </div>
   </div>
