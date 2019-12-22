@@ -445,4 +445,7 @@ export default {
     background-color: rgb(84, 92, 100);
     border-radius: 0px;
   }
+  a{
+    color: #ebeef5;
+  }
 </style>

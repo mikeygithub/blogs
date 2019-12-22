@@ -7,7 +7,7 @@
           <el-col>
             <div style="padding-top: 10px">
               <h1 style="line-height: 1.1;font-weight: 700;font-size: 80px;color: aliceblue">麦奇的博客</h1>
-              <span style="color: #fff;font-size: 20px">学习 生活 分享</span>
+              <!--<span style="color: #fff;font-size: 20px">学习 生活 分享</span>-->
             </div>
           </el-col>
         </el-row>
